@@ -10,30 +10,30 @@ def check_image(image_name):
 	#---------------------------------------------------------------
 	# Call Check API
 	#---------------------------------------------------------------
-	method = "POST"
-	data = '{"imageName": "' + image_name + '","force": true}'
+    method = "POST"
+    data = '{"imageName": "' + image_name + '","force": true}'
 
-	response = requests.request(
-		method = method,
-		url = url,
-		data = data, 
-		headers = {
-			"Content-Type": "application/json",
-			"X-API-KEY": api_key 
-		},
-		verify = False
-	)
+    response = requests.request(
+        method = method,
+	url = url,
+ 	data = data, 
+ 	headers = {
+ 		"Content-Type": "application/json",
+ 		"X-API-KEY": api_key
+ 	},
+ 	verify = False
+    )
 
 	#---------------------------------------------------------------
 	# Grab "result" from the response
 	#---------------------------------------------------------------
-	result = loads(response.content.decode('utf-8'))["result"]
-	print(result)
+    result = loads(response.content.decode('utf-8'))["result"]
+    print(result)
 
 	#---------------------------------------------------------------
 	# If NO alerts, return True (PASS); Else, return False (FAIL)
 	#---------------------------------------------------------------
-	return len(result["alerts"]) == 0
+    return len(result["alerts"]) == 0
 
 if __name__ == "__main__":
 	#---------------------------------------------------------------
