@@ -15,9 +15,9 @@ def check_image(image_name):
 
     response = requests.request(
         method = method,
-	url = url,
- 	data = data, 
- 	headers = {
+		url = url,
+ 		data = data, 
+ 		headers = {
  		"Content-Type": "application/json",
  		"X-API-KEY": api_key
  	},
