@@ -4,11 +4,10 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
+                    image 'broadinstitute/python-requests'
                 }
             }
             steps {
-		sh 'which curl'
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
