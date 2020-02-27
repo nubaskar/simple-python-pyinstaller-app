@@ -24,9 +24,9 @@ if __name__ == "__main__":
     result = loads(response.content.decode('utf-8'))["result"]
     print(result)
 
-    if len(result["alerts"]) == 0:
-        sys.exit(0)
-    else:
-        sys.exit(1)
-#     sys.exit(0)
+#     if len(result["alerts"]) == 0:
+#         sys.exit(0)
+#     else:
+#         sys.exit(1)
+    sys.exit(0)
 
