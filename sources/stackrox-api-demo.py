@@ -39,10 +39,10 @@ if __name__ == "__main__":
 	#---------------------------------------------------------------
 	# Validate with Check API
 	#---------------------------------------------------------------
-	# image_name = "405999462422.dkr.ecr.us-east-1.amazonaws.com/golang:latest"
+	ißmage_name = "405999462422.dkr.ecr.us-east-1.amazonaws.com/golang:latest"
 	
 	#---------------------------------------------------------------
-	# If NOT no alerts (Failed), exit with code 1
+	# If the check_image NOT PASSed, exit with code 1 
 	#---------------------------------------------------------------
 	if not check_image(image_name):
 		print("Check Failed!")
