@@ -39,7 +39,7 @@ if __name__ == "__main__":
 	#---------------------------------------------------------------
 	# Validate with Check API
 	#---------------------------------------------------------------
-	# image_name = "405999462422.dkr.ecr.us-east-1.amazonaws.com/golang:latest"
+	# image_name = "JUNK"
 	
 	#---------------------------------------------------------------
 	# If NOT no alerts (Failed), exit with code 1
