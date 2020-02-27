@@ -19,7 +19,7 @@ def check_image(image_name):
 		data = data, 
 		headers = {
 			"Content-Type": "application/json",
-			"X-API-KEY": api_key
+			"X-API-KEY": api_key 
 		},
 		verify = False
 	)
