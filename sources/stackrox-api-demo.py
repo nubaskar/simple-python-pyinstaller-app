@@ -3,8 +3,8 @@ import requests
 import sys
 
 # Globals
-url = "https://container-security.dev.secops.rpaworker.com/image/container/check"
-api_key = "6WN4BgpRfvdUxPZU7DABAfPCXjcaDwsvy6F7YdegNzb96sjmBV3qhY66nEmswQ5j"
+url = "JUNK"
+api_key = "JUNK"
 
 def check_image(image_name):
 	#---------------------------------------------------------------
