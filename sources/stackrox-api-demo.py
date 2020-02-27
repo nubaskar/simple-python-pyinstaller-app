@@ -3,8 +3,8 @@ import requests
 import sys
 
 # Globals
-url = "JUNK"
-api_key = "JUNK"
+url = "https://container-security.dev.secops.rpaworker.com/image/container/check"
+api_key = "6WN4BgpRfvdUxPZU7DABAfPCXjcaDwsvy6F7YdegNzb96sjmBV3qhY66nEmswQ5j"
 
 def check_image(image_name):
 	#---------------------------------------------------------------
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 	#---------------------------------------------------------------
 	# Validate with Check API
 	#---------------------------------------------------------------
-	# image_name = "JUNK"
+	# image_name = "405999462422.dkr.ecr.us-east-1.amazonaws.com/golang:latest"
 	
 	#---------------------------------------------------------------
 	# If NOT no alerts (Failed), exit with code 1
