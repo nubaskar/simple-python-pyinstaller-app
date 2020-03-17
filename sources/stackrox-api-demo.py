@@ -10,30 +10,29 @@ def check_image(image_name):
 	#---------------------------------------------------------------
 	# Call Check API
 	#---------------------------------------------------------------
-    method = "POST"
-    data = '{"imageName": "' + image_name + '","force": true}'
+	method = "POST"
+	data = '{"imageName": "' + image_name + '"}'
 
-    response = requests.request(
-        method = method,
+	response = requests.request(
+		method = method,
 		url = url,
  		data = data, 
  		headers = {
- 		"Content-Type": "application/json",
- 		"X-API-KEY": api_key
- 	},
- 	verify = False
-    )
-
+ 			"Content-Type": "application/json",
+ 			"X-API-KEY": api_key
+ 		}
+	)
+	
 	#---------------------------------------------------------------
 	# Grab "result" from the response
 	#---------------------------------------------------------------
-    result = loads(response.content.decode('utf-8'))["result"]
-    print(result)
+	result = loads(response.content.decode('utf-8'))["result"]
 
 	#---------------------------------------------------------------
-	# If NO alerts, return True (PASS); Else, return False (FAIL)
+	# If check_status is PASS, return True (PASS); Else, return False (FAIL)
 	#---------------------------------------------------------------
-    return len(result["alerts"]) == 0
+	return result["check_status"] == "PASS"
+
 
 if __name__ == "__main__":
 	#---------------------------------------------------------------
@@ -44,12 +43,12 @@ if __name__ == "__main__":
 	#---------------------------------------------------------------
 	# If the check_image NOT PASSed, exit with code 1 
 	#---------------------------------------------------------------
-	if not check_image(image_name): 
-		print("Check Failed!")
+	if not check_image(image_name):
+		print("FAIL")
 		sys.exit(1)
 
 	#---------------------------------------------------------------
-	# Continue if Check Passed
+	# Continue if Check PASSed
 	#---------------------------------------------------------------
-	print("Check Passed!")
+	print("PASS")
 	sys.exit(0)
