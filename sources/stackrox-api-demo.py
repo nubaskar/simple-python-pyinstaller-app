@@ -27,6 +27,7 @@ def check_image(image_name):
 	# Grab "result" from the response
 	#---------------------------------------------------------------
 	result = loads(response.content.decode('utf-8'))["result"]
+	print(result)
 
 	#---------------------------------------------------------------
 	# If check_status is PASS, return True (PASS); Else, return False (FAIL)
